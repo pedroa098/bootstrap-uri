@@ -1,0 +1,434 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Menu</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+      .menu-items div:hover,
+      .account div:hover,
+      .account2 div:hover {
+        border-bottom: 2px solid currentColor;
+        color: blue;
+      }
+
+      .caixa-verde {
+        background-color: #00a651;
+        color: white;
+      }
+
+      .caixa-verde::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: rgba(255, 255, 255, 0.3);
+      }
+
+      .caixa-verde2 {
+        background-color: #00a651;
+      }
+
+      .logo-ge {
+        font-size: 26px;
+        font-weight: bold;
+      }
+
+      .center-title {
+        font-size: 24px;
+        font-weight: bold;
+      }
+
+      .menu-icon {
+        font-size: 14px;
+        font-weight: bold;
+        cursor: pointer;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+
+      th, td {
+        text-align: center;
+        font-size: 14px;
+      }
+
+      td:nth-child(odd) {
+        background-color: #fdfdfd;
+      }
+
+      td:nth-child(even) {
+        background-color: #d1d1d143;
+      }
+
+      .bolinha-verde {
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        background-color: green;
+        border-radius: 50%;
+        margin: 0 2px;
+      }
+
+      .bolinha-branca {
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        background-color: rgb(222, 215, 215);
+        border-radius: 50%;
+        margin: 0 2px;
+      }
+
+      .bolinha-vermelha {
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        background-color: red;
+        border-radius: 50%;
+        margin: 0 2px;
+      }
+      
+      .jogos-rodada{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 90px;
+        border-bottom: 1px solid #ccc;
+        border-top: 1px solid #ccc;
+      } 
+
+      .tabelaResultadosEJogos{
+        display: flex;
+      }
+      .versus {
+    font-size: 16px;
+      }
+          
+      .time {
+      WIDTH: 40%;
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      }
+
+      .times {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 10px;
+      }
+      td:nth-child(odd) {
+          background-color: #fdfdfd;
+      }
+
+      td:nth-child(even) {
+          background-color: #d1c2c243;
+      }
+
+      td:first-child {
+          border-left: none;
+          border-right: none;
+          text-align: left;
+          padding-left: 20px;
+      }
+
+      td:last-child{
+          border-right: none;
+      }
+
+      .tirar-border{
+        width: 338px;
+        border-left: 1px solid #cec5c5;
+        padding-left: 30px;
+      }
+      .menu-items li:hover {
+        text-decoration: underline;
+        text-underline-offset: 4px; 
+        cursor: pointer;
+      }
+    
+      .account a:hover {
+        text-decoration: underline;
+        text-underline-offset: 4px;
+      }
+      .caixa-verde2 a {
+        text-decoration: none; 
+      }
+    
+      .caixa-verde2 a:hover {
+        text-decoration: underline !important;
+        text-underline-offset: 4px; 
+        cursor: pointer;
+      }
+      .mybtn{
+        color: white!important;
+      }
+      
+
+@media (max-width: 1024px) {
+    .card-body{
+      width: 100%;
+    }
+
+    .container {
+        flex-direction: column;
+        align-items: center;
+
+
+    }
+    table {
+        width: 100%;
+    }
+    .tirar-border{
+      border-left: 0px;
+      padding-left: 0px;
+      width: 55%;
+    }
+}
+
+@media (max-width: 1200px){
+  
+    .tirar{
+      display: none;
+    }
+    .account2{
+      display: none;
+    }
+    .card-body{
+      padding-right: 20px;
+      
+    }
+    .form-control {
+        display: none;
+    }
+    .tirar{
+        display: none;
+    }
+    
+  }
+@media (max-width: 1400px){
+  .card-body{
+      padding-right: 20px;
+      
+    }
+}
+  </style>
+  </head>
+  <body>
+
+    
+    <nav class="container-fluid d-flex align-items-center justify-content-between py-2 bg-light border-bottom">
+
+      <ul class="menu-items d-flex list-unstyled gap-3 mb-0">
+        <li class="text-primary fw-bold fs-5">globo</li>
+        <li class="text-danger fw-bold fs-5">g1</li>
+        <li class="text-success fw-bold fs-5">ge</li>
+        <li class="text-warning fw-bold fs-5">gshow</li>
+        <li class="text-danger fw-bold fs-5">globoplay</li>
+        <li class="fw-bold fs-5" style="color: orange;">cartola</li>
+        <li class="text-dark fw-bold fs-5">sportv</li>
+      </ul>
+    
+      <div class="d-flex gap-5 align-items-center">
+        <div class="account2">
+          <a href="#" class="text-primary text-decoration-none">Assine já</a>
+        </div>
+        <div class="account d-flex align-items-center">
+          <span class="material-icons me-2">account_circle</span>
+          <a href="#" class="tirar text-dark text-decoration-none">Conta Globo</a>
+        </div>
+      </div>
+    </nav>
+
+
+    <div class="caixa-verde d-flex align-items-center justify-content-between px-3 py-2">
+      <div class="d-flex align-items-center gap-3">
+        <button class="btn mybtn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions"style="background-color: ligth-green" ><span class="menu-icon">≡ MENU</span></button>
+
+        <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Em produção...</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <p>Não foi feito ainda...</p>
+          </div>
+        </div></button>
+
+<div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Backdrop with scrolling</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    <p>Try scrolling the rest of the page to see this option in action.</p>
+  </div>
+</div>
+        <span class="logo-ge">ge</span>
+        <div class="d-flex align-items-center">
+          <img src="https://s3.glbimg.com/v1/AUTH_378ee63fe83141e69caddd838034e850/static/components/escudo-header.png" alt="Logo" width="24" height="24">
+        </div>
+      </div>
+      <div class="titulo-brasileirao text-center center-title">
+        BRASILEIRÃO SÉRIE A
+      </div>
+      <div class="d-flex align-items-center">
+        <input class="form-control form-control-sm" type="text" placeholder="BUSCAR">
+      </div>
+    </div>
+    
+    <div class="caixa-verde2 text-white d-flex justify-content-between align-items-center px-3 py-2">
+      <div class="d-flex align-items-center gap-3">
+        <a href="#" class="text-white text-decoration-none fw-bold fs-5">classificação</a>
+        <a href="#" class="text-white text-decoration-none fw-bold fs-5">simulador</a>
+        <a href="#" class="text-white text-decoration-none fw-bold fs-5">vídeos</a>
+        <a href="#" class="text-white text-decoration-none fw-bold fs-5">seja pro</a>
+        <a href="#" class="text-white text-decoration-none fw-bold fs-5">VAR</a>
+      </div>
+    </div>
+
+    <div class="container py-4 tabelaResultadosEJogos" style="justify-content: space-around">
+      <div class=" mb-4" style="width: 70%;">
+        <div class="card-body" >
+          <h2 class="card-title text-left mb-4">Tabela</h2>
+          <div class="table-responsive">
+            <table class="table table-bordered table-striped text-center">
+              <thead class="table">
+                <tr>
+                  <th>CLASSIFICAÇÃO</th>
+                  <th>P</th>
+                  <th>J</th>
+                  <th>V</th>
+                  <th>E</th>
+                  <th>D</th>
+                  <th>GP</th>
+                  <th>GC</th>
+                  <th>SG</th>
+                  <th>%</th>
+                  <th>ÚLT. JOGOS</th>
+                </tr>
+              </thead>
+              <tbody id="tabela-times">
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="tirar-border">
+          <div>
+            <h2 class=" text-center mb-4">Jogos</h2>
+            <div class="d-flex justify-content-between align-items-center mb-3" style="border-top: 1px solid #cec5c5; padding-top: 10px;">
+              <button class="btn btn-outline-secondary btn-sm seta-esquerda">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-left" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0" />
+                </svg>
+              </button>
+              <span class="fw-bold">32ª RODADA</span>
+              <button class="btn btn-outline-secondary btn-sm seta-direita">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708" />
+                </svg>
+              </button>
+            </div>
+            <div id="jogos-rodada" class="jogos-rodada">
+            </div>
+          </div>
+        </div>
+    </div>
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        window.onload = function() {
+            $.ajax({
+                url: "https://api.api-futebol.com.br/v1/campeonatos/10/tabela",
+                headers: {"Authorization": "Bearer test_43419a77d23882daf5e2515a841de9"},
+                type: "GET",
+                success: function(data) {
+                    populateTable(data);
+                },
+                error: function(error) {
+                    alert("Deu erro na requisição: " + error.toString());
+                }
+            });            
+            
+            $.ajax({
+                url: "https://api.api-futebol.com.br/v1/campeonatos/10/rodadas/32",
+                headers: {"Authorization": "Bearer test_43419a77d23882daf5e2515a841de9"},
+                type: "GET",
+                success: function(data) {
+                    populateRodada(data);
+                },
+                error: function(error) {
+                    alert("Deu erro na requisição: " + error.toString());
+                }
+            });
+        }
+
+        function populateTable(data) {
+            const tabela = $('#tabela-times');
+            tabela.empty(); 
+            data.forEach((dadosTime) => {
+                let ultimosJogos = '';
+                dadosTime.ultimos_jogos.forEach(jogo => {
+                    if (jogo === "v") ultimosJogos += '<span class="bolinha-verde"></span>';
+                    else if (jogo === "e") ultimosJogos += '<span class="bolinha-branca"></span>';
+                    else if (jogo === "d") ultimosJogos += '<span class="bolinha-vermelha"></span>';
+                });
+    
+                const row = `<tr>
+                    <td class="team-name">${dadosTime.posicao} ${dadosTime.time.nome_popular}</td>
+                    <td>${dadosTime.pontos}</td>
+                    <td>${dadosTime.jogos}</td>
+                    <td>${dadosTime.vitorias}</td>
+                    <td>${dadosTime.empates}</td>
+                    <td>${dadosTime.derrotas}</td>
+                    <td>${dadosTime.gols_pro}</td>
+                    <td>${dadosTime.gols_contra}</td>
+                    <td>${dadosTime.saldo_gols}</td>
+                    <td>${dadosTime.aproveitamento}</td>
+                    <td>${ultimosJogos}</td>
+                </tr>`;
+                tabela.append(row);
+            });
+        }
+
+        function populateRodada(data){
+            const jogos = $('#jogos-rodada');
+            jogos.empty();
+
+            data.partidas.forEach((dadosJogos) => {
+                const row = `
+                <div class="jogo">
+                    <span class="estadio">
+                        ${dadosJogos.estadio.nome_popular} 
+                        <span class="data-hora"> ${dadosJogos.data_realizacao} - ${dadosJogos.hora_realizacao}</span>
+                    </span> 
+                    <div class="times">
+                        <div class="time">
+                            ${dadosJogos.time_mandante.sigla} 
+                            <img src="${dadosJogos.time_mandante.escudo}" style = "width: 30px; height: 30px"> 
+                            <span class="placar">${dadosJogos.placar_mandante}</span>
+                        </div>
+                        <span class="versus">X</span>
+                        <div class="time">
+                            <span class="placar">${dadosJogos.placar_visitante}</span>
+                            <img src="${dadosJogos.time_visitante.escudo}" style = "width: 30px; height: 30px">
+                            ${dadosJogos.time_visitante.sigla} 
+                        </div>
+                    </div>
+                </div>`;
+                jogos.append(row);
+            });
+        }
+    </script>
+  </body>
+</html>
